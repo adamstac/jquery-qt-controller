@@ -1,0 +1,138 @@
+/* ------------------------------------------------------------
+
+    Company:   Image202 Entertainment
+    Author:    Adam Stacoviak, adam@image202.com
+    Updated:   080223 1:51 AM
+
+------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+	Structure
+------------------------------------------------------------ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	margin: 0 0 1px 0;
+	padding: 0;
+}
+
+body {
+	font: 72.5% Verdana, Arial, sans-serif;
+	color: #353535;
+	background: #fff;
+}
+
+#container {
+	width: 660px;
+	margin: 0 auto;
+	padding: 50px 0 0 0;
+	text-align: center;
+}
+
+#content {
+	border-bottom: 1px solid #e7e7e7;
+	margin: 25px 0;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 20px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px 0;
+	text-align: center;
+}
+
+/* ------------------------------------------------------------
+	Headings
+------------------------------------------------------------ */
+#content h1 {
+	color: #1c1c1c;
+	font: bold 28px Arial, Helvetica, sans-serif;
+	margin-bottom: 15px;
+}
+
+/* ------------------------------------------------------------
+	Paragraphs
+------------------------------------------------------------ */
+#content p {
+	font-size: 12px;
+	line-height: 1.6;
+	margin-bottom: 10px;
+}
+	
+
+/* ------------------------------------------------------------
+	Lists
+------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------
+	Images
+------------------------------------------------------------ */
+a img {
+	border: none;
+}
+
+p img {
+	padding: 0;
+	max-width: 100%;
+}
+
+img.centered {
+	display: block;
+	margin: 15px auto;
+	padding: 0;
+}
+
+img.alignright {
+	display: inline;
+	margin: 15px 20px;
+}
+
+img.alignleft {
+	display: inline;
+	margin: 15px 20px;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+/* ------------------------------------------------------------
+	Links
+------------------------------------------------------------ */
+a {
+	color: #AE3232;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #AE3232;
+	text-decoration: underline;
+}
+
+a:focus, a:active {
+	outline: none;
+}
+
+/* ------------------------------------------------------------
+	Common, Misc...
+------------------------------------------------------------ */
+.hidden, hr {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
