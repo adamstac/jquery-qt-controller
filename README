@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------
+
+	jQuery QT Controller
+	========================================================
+	
+	Created by:		Adam Stacoviak
+	Date Created:	Thursday - March 20, 2008
+	Last Updated:	Thursday - March 20, 2008
+
+------------------------------------------------------------ */
+
+Introduction
+--------------------------------------------------------------/
+jQuery QT Controller, as best as possible, mimic the behavior that apple has in place here:
+
+* http://www.apple.com/iphone/gettingstarted/guidedtour_large.html
+* http://www.apple.com/pro/profiles/surface2air/
+* http://www.apple.com/ipodnano/ads/
+
+jQuery QT Controller should...
+--------------------------------------------------------------/
+* Build the quicktime embed in the DOM using a class hook.
+* If JavaScript is not enabled fall back on an image if possible, or at least fall back on the "noscript" tag in the markup. Also would like to create new markup in the DOM just inside the body tag indicating to "Please enable JavaScript to view this page properly."
+* If Quicktime is not installed, insert alternate markup with class hooks to style a "Quicktime is required" box and provide a link to Apple.com/quicktime
+* Build the controller markup by referencing a div with the class "jQQT_controller"
+* jQQT_play_head should be click-drag-able to jog through the video
+* The "track" should be click-able to jump the video to the clicked point
+* The control button should toggle from pause to play respectively updating the class from play to pause to allow for CSS styling to alter the representative graphic of play or pause.
+* Allow the user to set the width and height from the markup level. If the width and height isn't given the plugin must set it for the user (if possible).
+* Allow setting the quicktime movie's background color (if that's an option)
+* Near the top of the plugin (jquery.jQQTC.js), set an area where the default settings can be set.
