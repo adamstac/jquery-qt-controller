@@ -22,7 +22,7 @@ This will then populate the DOM with the proper Quicktime embed code.
 Function
 ---------
 
-jQuery Quicktime Controller, as best as possible:
+jQuery Quicktime Controller should:
 
 * Build the quicktime embed in the DOM using a class hook.
 * If JavaScript is not enabled fall back on an image if possible, or at least fall back on the "noscript" tag in the markup. Also would like to create new markup in the DOM just inside the body tag indicating to "Please enable JavaScript to view this page properly."
