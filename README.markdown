@@ -12,9 +12,9 @@ If you are a JavaScript Ninja, please get involved and help improve the plugin o
 
 Basic usage revolves around the use of this simple `markup` like so:
 
-	<div class="jQQT_movie_container">
+	<div class="qtc_movie_container">
 		<noscript><p>Please enable JavaScript to view this page properly.</p></noscript>
-		<a class="jQQT_movie {width:448,height:252,autoplay:true,bgcolor:#fff}" href="http://www.image202.com/files/media/TG_Homeless_J.mov">TG_Homeless_J.mov</a>
+		<a class="qtc_movie {width:448,height:252,autoplay:true,bgcolor:#fff}" href="http://www.image202.com/files/media/TG_Homeless_J.mov">TG_Homeless_J.mov</a>
 	</div>
 
 This will then populate the DOM with the proper Quicktime embed code.
@@ -27,8 +27,8 @@ jQuery Quicktime Controller should:
 * Build the quicktime embed in the DOM using a class hook.
 * If JavaScript is not enabled fall back on an image if possible, or at least fall back on the "noscript" tag in the markup. Also would like to create new markup in the DOM just inside the body tag indicating to "Please enable JavaScript to view this page properly."
 * If Quicktime is not installed, insert alternate markup with class hooks to style a "Quicktime is required" box and provide a link to Apple.com/quicktime
-* Build the controller markup by referencing a div with the class "jQQT_controller"
-* jQQT_play_head should be click-drag-able to jog through the video
+* Build the controller markup by referencing a div with the class "qtc_controller"
+* qtc_play_head should be click-drag-able to jog through the video
 * The "track" should be click-able to jump the video to the clicked point
 * The control button should toggle from pause to play respectively updating the class from play to pause to allow for CSS styling to alter the representative graphic of play or pause.
 * Allow the user to set the width and height from the markup level. If the width and height isn't given the plugin must set it for the user (if possible).
