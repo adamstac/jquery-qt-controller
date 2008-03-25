@@ -179,7 +179,7 @@ $.fn.qtc = function(options) {
 		/**************** Adjust the play bar's width ********************/
 		
 		var pw = parseInt(mwidth) - parseInt($('.qtc_button').css('width')) - WIDTH_OFFSET + 'px';
-		$('.qtc_playbar').css('width', pw);
+		$('div.qtc_playbar').css('width', pw);
 
 
 
@@ -188,14 +188,14 @@ $.fn.qtc = function(options) {
 
 		/************ Some parameters which can be gotten only after the controls are embedded ************/
 
-		var playbar_width = parseInt($('.qtc_playbar').css('width'));
-		var playhead_width = parseInt($('.qtc_play_head').css('width'));
+		var playbar_width = parseInt($('div.qtc_playbar').css('width'));
+		var playhead_width = parseInt($('div.qtc_play_head').css('width'));
 
 
 
 
 		/************** Play/Pause controls ***********************/
-		$('.qtc_button').click(function() {
+		$('div.qtc_button').click(function() {
 
 			// If the movie can't be played, return
 			if ((document[mid].GetPluginStatus() != 'Playable') && (document[mid].GetPluginStatus() != 'Complete')) { return; }
@@ -230,7 +230,7 @@ $.fn.qtc = function(options) {
 						pp = true;
 						trackPlayhead();
 						document[mid].Play();				
-						$('.qtc_button').removeClass('qtc_play').addClass('qtc_pause');
+						$('div.qtc_button').removeClass('qtc_play').addClass('qtc_pause');
 						}, AUTOPLAY_TIME);
 				}
 
@@ -239,12 +239,12 @@ $.fn.qtc = function(options) {
 					
 					if (document[mid].GetMaxBytesLoaded() >= document[mid].GetMovieSize()) {
 						clearInterval(mlt);
-						$('.qtc_track_loaded').css('width', '100%');
+						$('div.qtc_track_loaded').css('width', '100%');
 						return;
 					}
 					else {					
 						var pl = (document[mid].GetMaxBytesLoaded()/document[mid].GetMovieSize())*100;
-						$('.qtc_track_loaded').css('width', pl+'%');
+						$('div.qtc_track_loaded').css('width', pl+'%');
 					}
 				}, LOAD_RATE);
 
@@ -261,7 +261,7 @@ $.fn.qtc = function(options) {
 					startx:0
 				};
 
-				$('.qtc_play_head').mousedown(function(e) {
+				$('div.qtc_play_head').mousedown(function(e) {
 					playHead.mdown = true;
 					playHead.startx = e.pageX;			
 					stopMovie();
@@ -311,7 +311,7 @@ $.fn.qtc = function(options) {
 
 		/*********** Jump navigation via click clicking on the play bar *************/
 
-		$('.qtc_track_loaded').click(function(e) {
+		$('div.qtc_track_loaded').click(function(e) {
 		
 			var lx = e.layerX;
 		
@@ -353,15 +353,15 @@ $.fn.qtc = function(options) {
 					// Clear the playhead tracking timer
 					clearInterval(pht);
 					// Reposition the playhead
-					$('.qtc_play_head').css('left', '0px');
+					$('div.qtc_play_head').css('left', '0px');
 					// Change the play button to ready to play state
-					$('.qtc_button').removeClass('qtc_pause').addClass('qtc_play');
+					$('div.qtc_button').removeClass('qtc_pause').addClass('qtc_play');
 					// Set the playing status to false
 					pp = false;
 					return;
 				}
 
-				$('.qtc_play_head').css('left', rtime_pos+'px');
+				$('div.qtc_play_head').css('left', rtime_pos+'px');
 			}, PLAYHEAD_RATE);
 
 		}
@@ -378,7 +378,7 @@ $.fn.qtc = function(options) {
 			// Jump the movie
 			document[mid].SetTime(jumpt);
 			// Position the playhead
-			$('.qtc_play_head').css('left', jumpp+'px');
+			$('div.qtc_play_head').css('left', jumpp+'px');
 		}
 
 
@@ -389,7 +389,7 @@ $.fn.qtc = function(options) {
 				pp = true;
 				trackPlayhead();
 				document[mid].Play();				
-				$('.qtc_button').removeClass('qtc_play').addClass('qtc_pause');
+				$('div.qtc_button').removeClass('qtc_play').addClass('qtc_pause');
 		}
 
 		/************* Stop the movie ****************/
@@ -398,7 +398,7 @@ $.fn.qtc = function(options) {
 				pp = false;
 				stopPlayheadTrack();
 				document[mid].Stop();
-				$('.qtc_button').removeClass('qtc_pause').addClass('qtc_play');
+				$('div.qtc_button').removeClass('qtc_pause').addClass('qtc_play');
 		}
 
 
