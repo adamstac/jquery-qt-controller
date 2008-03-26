@@ -101,7 +101,7 @@ $.fn.qtc = function(options) {
 		var murl = $this.attr('href');
     var mid = murl.slice(murl.lastIndexOf('/')+1,murl.lastIndexOf('.'));
 
-		if (opts.width == undefined || opts.width == undefined) {
+		if (opts.width == undefined || opts.height == undefined) {
 			var err = '<div class="qtc_err">Width and height parameters must be specified</div>';
 			$p.append(err);
 			return;
