@@ -32,7 +32,7 @@ jQuery Quicktime Controller should:
 * The "track" should be click-able to jump the video to the clicked point
 * The control button should toggle from pause to play respectively updating the class from play to pause to allow for CSS styling to alter the representative graphic of play or pause.
 * Allow the user to set the width and height from the markup level. If the width and height isn't given the plugin must set it for the user (if possible).
-* Allow setting the quicktime movie's background color
+* Allow setting the quicktime movie's background color.
 
 Compatibility
 -------------
