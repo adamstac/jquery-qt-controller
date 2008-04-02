@@ -1,6 +1,21 @@
+/***************************************
+   =global styles
+-------------------------------------- */
+.qtc_controller {
+  position: relative;
+}
+.qtc_button,
+.qtc_playbar,
+.qtc_track_bg,
+.qtc_track_loaded,
+.qtc_play_head {
+  position: absolute;
+}
+
 .qtc_movie_container {
 	margin: 0 auto;
 }
+
 
 .qtc_install {
 	color: red;
@@ -9,13 +24,20 @@
 	margin: 0 auto;
 }
 
-.qtc_controller {
-	position: relative;
+.qtc_err {
+	color: #f00;
+}
+
+/***************************************
+   =minimalist theme
+-------------------------------------- */
+
+
+.min .qtc_controller {
 	margin-top: 6px;
 }
 
-.qtc_button {
-	position: absolute;
+.min .qtc_button {
 	top: 0;
 	left: 0;
 	width: 10px;
@@ -23,45 +45,38 @@
 	cursor: pointer;
 }
 
-.qtc_play {
+.min .qtc_play {
 	background: url(../images/controls.jpg) no-repeat 0 0;
 }
 
-.qtc_pause {
+.min .qtc_pause {
 	background: url(../images/controls.jpg) no-repeat 0 -10px;
 }
 
-.qtc_playbar {
-	position: absolute;
+.min .qtc_playbar {
 	left: 15px;
 	height: 9px;
 	top: 1px;
 }
 
-.qtc_track_bg {
+.min .qtc_track_bg {
 	height: 9px;
 	width: 100%;
 	background: #e7e7e7;
-	position: absolute;
 }
 
-.qtc_track_loaded {
+.min .qtc_track_loaded {
 	height: 9px;
 	width: 1px;
 	background: #c7c7c7;
-	position: absolute;
 
 }
 
-.qtc_play_head {
+.min .qtc_play_head {
 	cursor: pointer;
 	width: 5px;
 	height: 100%;
 	background: #999;
-	position: absolute;
 	z-index: 1;
 }
 
-.qtc_err {
-	color: #ff0000;
-}
